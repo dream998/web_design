@@ -1,0 +1,145 @@
+			* {
+			  box-sizing: border-box;
+			}
+			body{
+				background-color: #dedede;
+				width: 90%;
+				margin: 0 auto;
+			}
+			.header{
+				background-color: #333333;
+				
+			}
+			.header:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			.header_left{
+				float: left;
+				padding: 0 10px;
+			}
+			.header_right{
+				margin: 0;
+				list-style-type: none;
+				padding: 0;
+				float: right;	
+			}
+			.header li{
+				display: inline-block;	
+			}
+			li a{
+				color: white;
+				text-decoration: none;
+				display: block;
+				
+				padding: 14px 16px;
+				
+			}
+			li a:visited{
+				color: #CCCCCC;
+			}
+			li a:hover{
+				background-color: black;
+				color: white;
+			}
+			.content:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			.content_left{
+				width: 70%;
+				float: left;
+				
+			}
+			.content_right{
+				width: 30%;
+				float: left;
+				padding-left:20px;	
+				
+			}
+			.box:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			.box{
+				background-color: white;
+				box-shadow:2px 2px 3px #aaaaaa;
+				margin:20px 0;
+				border-radius: 5px;
+				padding: 5px 10px;
+			}
+			label{
+				display: inline-block;
+				width: 120px;
+				height: 40px;
+				text-align: right;
+				margin-right: 10px;
+			}
+			
+			.hint{
+				margin-bottom: 10px;
+				margin-left: 130px;
+				overflow: auto;
+				right: 80px;
+			}
+			.bottom{
+				background-color: #000000;
+				color: white;
+				text-align: center;
+				width: 100%;
+				padding: 14px 20px;
+			}
+			.box3{
+				
+				display: flex;
+				flex-wrap: wrap;
+				margin-left: 10px;
+				
+			}
+			.card{
+				padding: 0 16px;
+				text-align: center;
+				border: solid 1px #CCCCCC;
+				margin: 10px 10px;
+				
+				
+			}
+			img{
+				width: 150px;
+				height: 100px;
+			}
+			table{
+				border-collapse: collapse;
+				border: solid 1px #717171;
+			}
+			table:first-child{
+				border: solid 1px white;
+			}
+			th
+			{
+				background-color:black;
+				color:white;
+			}
+			td,th{
+				height: 50px;
+				width: 300px;
+				text-align: start;
+				padding-left: 10px;
+			}
+			#submit{
+				margin: 0 auto;
+				width: 370px;
+				height: 36px;
+				border: 1px solid #cad2db;
+				padding: 0 5px;
+				border-radius: 5px;
+				font-size: 14px;
+				color: #717171;
+				background-color: #00a7de;
+				color: white;
+			}
+			
+		
