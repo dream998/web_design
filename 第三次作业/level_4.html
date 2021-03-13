@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script src="jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		
+		
+		var data = {
+			  age: 18,
+			  name: "liuruchao",
+			  education: ["小学", "初中", "高中", "大学", undefined, null],
+			  likesFood: new Set(["fish", "banana"]),
+			  friends: [
+					{ name: "summer",  sex: "woman"},
+					{ name: "daWen",   sex: "woman"},
+					{ name: "yang",    sex: "man" }  ], 
+			  work: { 
+					  time: "2019", 
+					  project: { name: "test",obtain: ["css", "html", "js"]} 
+					}, 
+			  play: function() {    console.log("玩滑板");  }
+		  } 
+		  
+		  function deepClone(obj){
+		      let objClone = Array.isArray(obj)?[]:{};
+		      if(obj && typeof obj==="object"){
+		          for(key in obj){
+		              if(obj.hasOwnProperty(key)){
+		                  //判断ojb子元素是否为对象，如果是，递归复制
+		                  if(obj[key]&&typeof obj[key] ==="object"){
+		                      objClone[key] = deepClone(obj[key]);
+		                  }else{
+		                      //如果不是，简单复制
+		                      objClone[key] = obj[key];
+		                  }
+		              }
+		          }
+		      }
+		      return objClone;
+		  }    
+		  
+		 function deepClone2(obj){
+			 let newObj=Array.isArray(obj)?[]:{};
+			return $.extend(true,newObj,obj)
+		 } 
+		 
+		 var data1=deepClone(data);
+		  var data2=deepClone2(data);
+		  //data2=JSON.parse(JSON.stringify(data));
+		 console.log("原始数据")
+		  console.log(data);
+		  console.log('递归复制')
+		  console.log(data1);
+		  console.log('Jquery复制')
+		  console.log(data2);
+
+	</script>
+	<body>
+	</body>
+</html>
