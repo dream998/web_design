@@ -6,6 +6,7 @@
 	</head>
 	<script type="text/javascript">
 		var arr = [1, [2, [3, [4, 5]]], 6];
+		//var arr=[1,[[2,3],4],5];
 		// function even (arr) {
 		//   //你的代码
 		//   arr=arr.join(',').split(',').map((item)=>Number(item));
@@ -39,17 +40,10 @@
 			console.log(arr);
 		}
 		
-		function even3(arr){
-			for (let i = 0; i < arr.length; i++) {
-				if(!Array.isArray(arr[i])){
-					arr=[].concat(...arr)
-				}
-			}
-			console.log(arr);
-		}
+		
 		even(arr)
 		even2(arr)
-		even3(arr)
+		
 	</script>
 	<body>
 	</body>
