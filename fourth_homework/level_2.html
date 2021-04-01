@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style type="text/css">
+			/* css部分是对评论添加的简单样式 */
+			.comment {
+				width: 560px;
+
+				padding: 15px 10px;
+
+				
+				margin: 10px;
+				overflow: hidden;
+				position: relative;
+			}
+
+			.comment::after {
+				content: "";
+				display: block;
+				height: 0;
+				clear: both;
+				visibility: hidden;
+			}
+
+			.span {
+				position: absolute;
+				width: 100%;
+				display: block;
+				bottom: 0;
+				cursor: pointer;
+
+				color: orangered;
+				text-align: center;
+				background: linear-gradient(180deg, rgba(255, 255, 255, 0), #fff);
+			}
+
+			.img {
+				height: 48px;
+				width: 48px;
+				border-radius: 24px;
+				display: block;
+				float: left;
+				margin-top: 10px;
+			}
+
+			.p {
+				float: left;
+				width: 500px;
+				margin-left: 12px;
+				text-overflow: ellipsis;
+				/* white-space: nowrap; */
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<textarea name="" id="textarea" cols="80" rows="10"></textarea>
+		<button class="post">点击发布</button>
+		<div class="list">
+		</div>
+
+		<script>
+			//创建节点
+			const textarea = document.getElementById('textarea');
+			const list = document.getElementsByClassName('list')[0];
+			const post = document.getElementsByClassName('post')[0];
+			post.onclick = function() {
+
+				let content = textarea.value;
+				if (content) {
+
+
+					//创建节点
+					let discuss = document.createElement('p');
+					let comment = document.createElement('div');
+					let more = document.createElement('span');
+					let img = document.createElement('img');
+
+					//添加样式和设置内容
+					img.className = 'img';
+					discuss.className = 'p';
+					more.className = 'span';
+					comment.className = 'comment';
+					img.src = '../作业/img/pic_2.jpg';
+					more.innerHTML = '查看更多';
+					discuss.innerHTML = content;
+
+					//节点上书
+					comment.appendChild(img);
+					comment.appendChild(discuss);
+					list.appendChild(comment);
+					
+					//判断内容的高度，如果超过100px则设置固定高度并添加span
+					if (discuss.offsetHeight > 100) {
+						//alert(comment.offsetHeight)
+						discuss.style.height = 100 + 'px';
+						comment.appendChild(more);
+					}
+					//为查看更多添加点击事件
+					more.onclick = function() {
+						discuss.style.height = 'auto';
+						more.style.display = 'none';
+					}
+				
+
+
+				} else {
+					alert("请输入内容");
+				}
+			}
+		</script>
+	</body>
+</html>

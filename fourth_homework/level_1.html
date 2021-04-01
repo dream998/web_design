@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			ul {
+				list-style: none;
+				width: 200px;
+				height: 200px;
+			}
+
+			li {
+				box-sizing: border-box;
+				border: 2px solid black;
+				float: left;
+				width: 20px;
+				height: 20px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				let ul = document.getElementsByTagName('ul')[0];
+				let lis = document.getElementsByTagName('li');
+				//console.log(lis)
+
+				ul.onmousedown = function() {
+					ul.onmousemove = function(event) {
+						if (event.target.nodeName == 'LI')
+							event.target.style.backgroundColor = 'red';
+
+
+					}
+					console.log(event);
+					ul.onmouseup = function() {
+						ul.onmousemove = null;
+						ul.onmouseup = null;
+
+					}
+					return false;
+
+				}
+				console.log(document.body)
+			// document.addEventListener('mouseup',function(){
+			// 	ul.onmousemove = null;
+			// 	ul.onmouseup = null;
+			// },true)
+			document.onmouseup=function(){
+				ul.onmousemove = null;
+				ul.onmouseup = null;
+			}
+
+
+
+
+			}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html>
