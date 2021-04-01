@@ -22,7 +22,7 @@
 		<script type="text/javascript">
 			window.onload = function() {
 				let ul = document.getElementsByTagName('ul')[0];
-				let lis = document.getElementsByTagName('li');
+				let lis = ul.getElementsByTagName('li');
 				//console.log(lis)
 
 				ul.onmousedown = function() {
@@ -35,20 +35,16 @@
 					console.log(event);
 					ul.onmouseup = function() {
 						ul.onmousemove = null;
-						ul.onmouseup = null;
-
+						
 					}
 					return false;
 
 				}
 				console.log(document.body)
-			// document.addEventListener('mouseup',function(){
-			// 	ul.onmousemove = null;
-			// 	ul.onmouseup = null;
-			// },true)
+		
 			document.onmouseup=function(){
 				ul.onmousemove = null;
-				ul.onmouseup = null;
+				
 			}
 
 
