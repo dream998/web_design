@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Student(name) {
+				function People(name) {
+					this.tasks = [];
+					var self = this;
+
+					let fn = function() {
+						console.log(`Hi! This is ${name}!`);
+						self.next()
+						
+					};
+					this.tasks.push(fn);
+					setTimeout(function() {
+						self.next()
+					}, 0);
+				};			
+				People.prototype.sleep = function(time) {
+					let self = this;
+
+					let task = function() {
+						setTimeout(function() {
+							console.log(`Wake up after ${time}`);
+							self.next()
+						}, 1000 * time);
+					}
+					this.tasks.push(task);
+					return this;
+				}
+				People.prototype.next = function() {
+					let fn = this.tasks.shift();
+					fn && fn();
+				}
+				People.prototype.sleepFirst = function(time) {
+					let self = this;
+					let task = function() {
+						setTimeout(function() {
+							console.log(`Wake up after ${time}`);
+							self.next()
+						}, 1000 * time);
+					}
+					this.tasks.unshift(task);
+					return this;
+				}
+				People.prototype.study = function(course) {
+					let self = this;
+
+					let task = function() {
+						console.log(`Study ${course}~`);
+						self.next()
+					}
+					this.tasks.push(task);
+					return this;
+				}
+				return new People(name);
+			}
+			Student('fxy');
+			Student('fxy').sleep(3).study('javascript');
+			Student('fxy').study('javascript').study('Vue');
+			Student('fxy').sleepFirst(5).study('Ajax');
+		</script>
+	</body>
+</html>

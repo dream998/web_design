@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 未改造之前：5-> 5,5,5,5
+			for (var i = 0; i < 5; i++) {
+				(function (i) {
+					setTimeout(function() {
+			        console.log(new Date, i);
+			    }, 1000);
+				}(i))
+			    
+			}
+			console.log(new Date, i);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
