@@ -1,0 +1,88 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#app {
+	max-width: 800px;
+	margin: 50px auto;
+	
+
+}
+#app #nav{
+	background-color: #bfa;
+	height: 50px;
+	display: flex;
+	
+}
+
+#app #nav input:nth-child(1){
+	height: 46px;
+	flex: 4;
+	
+	
+}
+#app #nav input:nth-child(2){
+	height: 50px;
+	
+	flex: 1;
+}
+#search_song {
+	
+}
+
+#song_list {
+	display: flex;
+	flex-flow: row wrap;
+	align-content: flex-start;
+	padding-left: 20px;
+}
+
+#song_list .item {
+	margin: 10px 10px;
+	border-radius: 5px;
+}
+
+#app #song_list .item:hover img {
+	box-shadow: 0 0 8px rgb(0 0 0 / 60%);
+}
+
+#song_list .item .item_text {
+	width: 150px;
+}
+
+#song_list .item .item_img {}
+
+#song_list .item img {
+	width: 150px;
+	height: 150px;
+	border-radius: 5px;
+
+}
+#search_song{
+	display: none;
+}
+#search_song table{
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+	
+}
+#search_song table tr{
+	height: 50px;
+	margin-left: 50px;
+	
+}
+#app #search_song table tr:hover{
+	background-color: #696969;
+}
+#search_song table tr th{
+	padding-left: 20px;
+	padding-right: 5px;
+	font-size: 15px;
+	font-weight: 400;
+	font-family: '微软雅黑';
+}
+#search_song table tr:nth-child(2n){
+	background-color: #CCCCCC;
+}

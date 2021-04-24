@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script src="./level_4.js"></script>
+		<script type="text/javascript">
+			frankAjax({
+				type: 'get',
+				url: 'http://musicapi.leanapp.cn/personalized',
+				data: {
+					username: 'zhang',
+					password: 'zhang'
+				}
+			}).then((message)=>{
+				console.log(message);
+			}).catch((err)=>{
+				console.log(err);
+			})
+		</script>
+	</body>
+</html>

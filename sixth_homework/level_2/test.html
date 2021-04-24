@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="./frankajax.js"></script>
+
+	</head>
+	<body>
+		<button type="button" id="button">发送</button>
+		<script type="text/javascript">
+			document.getElementById('button').onclick = function() {
+				frankAjax({
+					type: 'get',
+					url: 'http://musicapi.leanapp.cn/personalized',
+					data: {
+						username: 'zhang',
+						password: 'zhang'
+					},
+					success: function(result) {
+						console.log(result);
+					}
+
+				})
+			}
+			
+		
+		</script>
+	</body>
+</html>
