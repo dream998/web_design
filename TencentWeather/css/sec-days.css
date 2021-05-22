@@ -1,0 +1,58 @@
+#sec-days{
+    width: 100%;
+    height: 380px;
+    overflow: scroll;
+    position: relative;
+    background-color: white;
+}
+#sec-days::-webkit-scrollbar {
+    display: none;
+}
+#sec-days .wrapper{
+    width: 437.5px;
+    height: auto;
+    padding-left: 10px;
+    margin: 20px 0;
+}
+#sec-days .wrapper li{
+    width: 62.5px;
+    float: left;
+    font-size: 12px;
+}
+#sec-days .wrapper .night{
+    margin-top: 136px;
+}
+#sec-days .wrapper::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+#sec-days #weather-chart{
+    position: absolute;
+    top: 100px;
+    margin-left: 0;
+    left: -70px;
+}
+#sec-days .week{
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 0px;
+}
+#sec-days .data{
+    font-size: 12px;
+    color: #999;
+   margin-top: 2px;
+}
+#sec-days .days_weather{
+    font-size: 14px;
+
+}
+
+#sec-days svg{
+    height: 24px;
+    width: 24px;
+}
+#sec-days .days_wind{
+    font-size: 12px;
+    color: #999;
+}

@@ -1,0 +1,54 @@
+#sec-hours{
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+#sec-hours li{
+    
+    width: 60px;
+    float: left;
+    text-align: center;
+  
+}
+#sec-hours ul{
+    list-style: none;
+    padding: 0;
+    
+    height: 120px;
+   display: flex;
+}
+#sec-hours ul::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+#sec-hours div{
+   
+    overflow:scroll;
+}
+#sec-hours div::-webkit-scrollbar {
+    display: none;
+}
+#sec-hours ul svg{
+    height: 30px;
+    width: 30px;
+    display: block;
+    margin: 15px auto;
+}
+#sec-hours .time{
+    font-size: 12px;
+    line-height: 12px;
+    height: 12px;
+    color: #999;
+}
+#sec-hours .temperature{
+    font-size: 14px;
+    color: #434343;
+    line-height: 14px;
+    height: 14px;
+}
+#sec-hours li{
+    flex: 1;
+    margin: 0 10px;
+}
+

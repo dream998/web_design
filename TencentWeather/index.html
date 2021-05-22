@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腾讯天气</title>
+
+
+    <link rel="stylesheet" href="./css/index.css">
+
+
+</head>
+
+<body>
+    <div id="app">
+        <section id="sec-main">
+            <div class="wrap">
+                <div class="top-bar">
+                    <a href="" class="return">
+                        <svg class="icon " aria-hidden="true">
+                            <use xlink:href="#icon-ziyuanxhdpi"></use>
+                        </svg>
+                    </a>
+                    <a onclick="goLocation()" class="location">
+                        <svg class="icon " aria-hidden="true">
+                            <use xlink:href="#icon-weizhi"></use>
+                        </svg>
+                        <span id="location">重庆</span>
+                    </a>
+                    <a href="" class="share">
+                        <svg class="icon " aria-hidden="true">
+                            <use xlink:href="#icon-fenxiang"></use>
+                        </svg>
+                    </a>
+
+                </div>
+
+                <div class="center">
+                    <p id="tem"></p>
+                    <p id="wea"></p>
+                    <p id="wind"></p>
+                    <p id="air"></p>
+                    <p>现在的温度比较凉爽</p>
+                </div>
+            </div>
+            <div class="ct-aqi">
+                <p id="til">41</p>
+                <p id="value">优</p>
+            </div>
+        <div class="ct-pop-window">
+            <div class="bg-cover"></div>
+            <div id="ct-air-pop" class="ct-window level1">
+                <div id="ct-main"><a id="icon-close"></a>
+                    <p id="titl">空气质量指数</p>
+                    <p id="val">41</p>
+                    <p id="level">优</p>
+                </div>
+                <table id="detal">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p class="val">13</p>
+                                <p class="titl">PM2.5</p>
+                            </td>
+                            <td>
+                                <p class="val">17</p>
+                                <p class="titl">PM10</p>
+                            </td>
+                            <td>
+                                <p class="val">4</p>
+                                <p class="titl">SO2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="val">16</p>
+                                <p class="titl">NO2</p>
+                            </td>
+                            <td>
+                                <p class="val">131</p>
+                                <p class="titl">O3</p>
+                            </td>
+                            <td>
+                                <p class="val">0</p>
+                                <p class="titl">CO</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </section>
+
+
+
+        <section id="sec-tomorrow">
+
+            <div class="today">
+                <div class="left">
+                    <p>今天</p>
+                    <p id="today_wea">多云</p>
+                </div>
+                <div class="right">
+                    <p id="today_tem">27/16°</p>
+                    <svg class="icon" aria-hidden="true">
+
+                    </svg>
+                </div>
+            </div>
+            <div class="tomorrow">
+                <div class="left">
+                    <p>明天</p>
+                    <p id="tomorrow_wea">多云</p>
+                </div>
+                <div class="right">
+                    <p id="tomorrow_tem">27/16°</p>
+                    <svg class="icon" aria-hidden="true">
+
+                    </svg>
+                </div>
+            </div>
+
+        </section>
+        <section id="sec-hours">
+            <div>
+                <ul>
+
+                </ul>
+            </div>
+
+        </section>
+        <section id="sec-days">
+            <ul class="wrapper">
+                <li>
+                    <p>今天</p>
+                    <p>日期</p>
+                    <p>天气</p>
+
+                    <svg class="icon" aria-hidden="true">
+
+                    </svg>
+                    <div class="night">
+                        <svg class="icon" aria-hidden="true">
+
+                        </svg>
+                        <p>多云</p>
+                        <p>南风3级</p>
+                    </div>
+
+                </li>
+                <li>
+                    <p>明天</p>
+                    <p>日期</p>
+                    <p>天气</p>
+                    <svg class="icon" aria-hidden="true">
+
+                    </svg>
+                    <div class="night">
+                        <svg class="icon" aria-hidden="true">
+
+                        </svg>
+                        <p>多云</p>
+                        <p>南风3级</p>
+                    </div>
+
+                </li>
+                <li>
+                    <p>后天</p>
+                    <p>日期</p>
+                    <p>天气</p>
+                    <svg class="icon" aria-hidden="true">
+
+                    </svg>
+                    <div class="night">
+                        <svg class="icon" aria-hidden="true">
+
+                        </svg>
+                        <p>多云</p>
+                        <p>南风3级</p>
+                    </div>
+
+                </li>
+                <li>
+                    <p>今天</p>
+                    <p>日期</p>
+                    <p>天气</p>
+                    <svg class="icon" aria-hidden="true">
+
+                    </svg>
+                    <div class="night">
+                        <svg class="icon" aria-hidden="true">
+
+                        </svg>
+                        <p>多云</p>
+                        <p>南风3级</p>
+                    </div>
+
+                </li>
+                <li>
+                    <p>今天</p>
+                    <p>日期</p>
+                    <p>天气</p>
+                    <svg class="icon" aria-hidden="true">
+
+                    </svg>
+                    <div class="night">
+                        <svg class="icon" aria-hidden="true">
+
+                        </svg>
+                        <p>多云</p>
+                        <p>南风3级</p>
+                    </div>
+
+                </li>
+                <li>
+                    <p>今天</p>
+                    <p>日期</p>
+                    <p>天气</p>
+                    <svg class="icon" aria-hidden="true">
+
+                    </svg>
+                    <div class="night">
+                        <svg class="icon" aria-hidden="true">
+
+                        </svg>
+                        <p>多云</p>
+                        <p>南风3级</p>
+                    </div>
+
+                </li>
+                <li>
+                    <p>今天</p>
+                    <p>日期</p>
+                    <p>天气</p>
+                    <svg class="icon" aria-hidden="true">
+
+                    </svg>
+                    <div class="night">
+                        <svg class="icon" aria-hidden="true">
+
+                        </svg>
+                        <p>多云</p>
+                        <p>南风3级</p>
+                    </div>
+
+                </li>
+
+            </ul>
+            <div id="weather-chart" style="width: 550px;height:200px;"></div>
+        </section>
+        <section id="section-living">
+            <div>
+
+
+                <ul>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-chakanxianhang"></use>
+                        </svg>
+                        <p>不限行</p>
+                        <p>空调开启</p>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-category"></use>
+                        </svg>
+                        <p></p>
+                        <p>穿衣</p>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-san"></use>
+                        </svg>
+                        <p></p>
+                        <p>紫外线</p>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-yao"></use>
+                        </svg>
+                        <p></p>
+                        <p>感冒</p>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xiche1-copy"></use>
+                        </svg>
+                        <p></p>
+                        <p>洗车</p>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-icon-"></use>
+                        </svg>
+                        <p></p>
+                        <p>运动</p>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-fangshai"></use>
+                        </svg>
+                        <p></p>
+                        <p>防晒</p>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-diaoyu"></use>
+                        </svg>
+                        <p></p>
+                        <p>钓鱼</p>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-lvyou"></use>
+                        </svg>
+                        <p></p>
+                        <p>旅游</p>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-tubiaozhizuomoban"></use>
+                        </svg>
+                        <p></p>
+                        <p>交通</p>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-qiya"></use>
+                        </svg>
+                        <p></p>
+                        <p>空气污染扩散条件</p>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-shushi"></use>
+                        </svg>
+                        <p></p>
+                        <p>舒适度</p>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-liangshai"></use>
+                        </svg>
+                        <p></p>
+                        <p>晾晒</p>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huazhuang"></use>
+                        </svg>
+                        <p></p>
+                        <p>化妆</p>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-chenlian"></use>
+                        </svg>
+                        <p>不宜</p>
+                        <p>太阳镜</p>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-guomin"></use>
+                        </svg>
+                        <p></p>
+                        <p>过敏</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div id="section-toast">
+            <div class="bg-color"> </div>
+            <div class="ct-window">
+                <h3></h3>
+                <p></p>
+                <button>我知道了</button>
+            </div>
+        </div>
+
+        <footer id="section-footer"></footer>
+        <section id="section-location">
+            <div class="ct-search">
+                <a id="btn-cancel" onclick="goMain()">取消</a>
+                <div id="ct-input">
+                    <span id="icon-search"></span>
+                    <input type="text" id="i-location" placeholder="搜索地区" value="">
+                </div>
+
+
+            </div>
+            <ul class="city-list">
+
+            </ul>
+            <div class="ct-hot-city">
+                <div class="ct-history">
+
+
+                    <a href="javascript:;" id="btn-clean"></a>
+                    <p class="title" id="history-title">历史记录</p>
+                    <ul class="ls-city" id="cityHistory">
+                        <li class="opt city "></li>
+                        <li class="opt city center"></li>
+                        <li class="opt city "></li>
+                    </ul>
+                </div>
+                <p class="title">热门城市</p>
+                <ul class="ls-city">
+                    <li class="opt city " data-province="北京" data-city="北京">北京</li>
+                    <li class="opt city center" data-province="上海" data-city="上海">上海</li>
+                    <li class="opt city " data-province="广东" data-city="广州">广州</li>
+                    <li class="opt city " data-province="广东" data-city="深圳">深圳</li>
+                    <li class="opt city center" data-province="河南" data-city="郑州">郑州</li>
+                    <li class="opt city " data-province="陕西" data-city="西安">西安</li>
+                    <li class="opt city " data-province="江苏" data-city="南京">南京</li>
+                    <li class="opt city center" data-province="浙江" data-city="杭州">杭州</li>
+                    <li class="opt city " data-province="湖北" data-city="武汉">武汉</li>
+                    <li class="opt city " data-province="四川" data-city="成都">成都</li>
+                    <li class="opt city center" data-province="辽宁" data-city="沈阳">沈阳</li>
+                    <li class="opt city " data-province="天津" data-city="天津">天津</li>
+                </ul>
+            </div>
+        </section>
+        <section id="sec-share">
+            <div id="ct-links"><a href="http://m.weather.com.cn" id="txt-pub">数据来源于中国天气网</a></div>
+            <div id="copyright">Copyright © 1998 - 2021 Tencent. All Rights Reserved</div>
+        </section>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/Mock.js/1.0.0/mock-min.js"></script>
+    <script src="//at.alicdn.com/t/font_2541015_q32ovm9dq4d.js"></script>
+    <script src="./js/axios.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.1.0/echarts.min.js"></script>
+    <!-- 通过IP地址获取当前设备的位置信息 -->
+    <script src="http://pv.sohu.com/cityjson"></script>
+    <script src="./js/request.js"></script>
+    <script src="./js/mock.js"></script>
+    <script src="./js/sec-main.js"></script>
+    <script src="./js/sec-tomorrow.js"></script>
+    <script src="./js/sec-hours.js"></script>
+    <script src="./js/sec-days.js"></script>
+    <script src="./js/section-living.js"></script>
+    <script src="./js/section-location.js"></script>
+    <script src="./js/section-toast.js"></script>
+    <script>
+
+        // var threeDaysData={}
+        // var SevenDaysData={}
+        // var livingData={}
+        // var todayData={}
+        // var hoursData={}
+        var currentLocationId
+        console.log(returnCitySN.cname);
+        requestLocation(returnCitySN.cname)
+
+        function getWeatherIcon(state) {
+            switch (state) {
+                case '晴':
+                    return 'icon-qing'
+                case '多云':
+                    return 'icon-duoyun'
+                case '小雨':
+                    return 'icon-xiaoyu'
+                case '中雨':
+                    return 'icon-zhongyu'
+                case '大雨':
+                    return 'icon-dayu'
+                case '阴':
+                    return 'icon-yin'
+                default:
+                    return 'icon-zhongyu'
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+#section-toast .bg-color{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.43);
+    z-index: 999;
+    display: none;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+
+}
+
+#section-toast .ct-window{
+    border-radius: 8px;
+    background: #fff;
+    padding-bottom: 20px;
+    position: fixed;
+    width: 250px;
+    left: 50%;
+    top: 50%;
+    margin-left: -125px;
+    z-index: 1000;
+    visibility: visible;
+    text-align: center;
+    -webkit-transform: translateY(-40%);
+    transform: translateY(-40%);
+    opacity: 0;
+    -webkit-transition: all .3s ease 50ms;
+    transition: all .3s ease 50ms;
+}
+#section-toast .ct-window h3{
+    height: 58px;
+    line-height: 58px;
+    font-size: 20px;
+    background-color: rgb(178, 138, 144);
+    font-weight: 400;
+    color: #fff;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    margin: 0;
+}
+#section-toast .ct-window p{
+    font-size: 14px;
+    color: #434343;
+    line-height: 22px;
+    padding: 27px 20px 20px;
+    text-align: left;
+}
+#section-toast .ct-window button{
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(178, 138, 144);
+    border: none;
+}

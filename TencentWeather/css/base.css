@@ -1,0 +1,28 @@
+
+a{
+    text-decoration: none;
+  
+}
+a:visited{
+    color: #b2b2b2;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+ #app{
+    margin: 0 auto;
+    text-align: center;
+ }
+
+ ul{
+     list-style: none;
+ }
+body{
+    background-color: #f4f4f4;
+    max-width: 500px;
+    margin: 0 auto;
+   
+}
