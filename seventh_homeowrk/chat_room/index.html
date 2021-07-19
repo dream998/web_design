@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webscoket</title>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<!-- echo 把接受到的数据返回过去 -->
+<!-- 这里是小明的聊天列表 
+   定义了他进入的是聊天室，还是单聊。
+   告诉了服务器，我是要进入那个聊天室。
+   或者是我要和谁聊天。
+-->
+<body>
+    <div class="navigation"><h1>小明好友列表</h1></div>
+    <ul class="fridenslist">
+        <li><a href="chat.html?name=xiaoming&group=1">聊天室一(小红、小明、小张)</a></li>
+        <li><a href="chat.html?name=xiaoming&group=2">聊天室二（小红、小李、小明）</a></li>
+        <li><a href="chat.html?name=xiaoming&to=xiaohong">小红</a></li>
+        <li><a href="chat.html?name=xiaoming&to=xiaoli">小李</a></li>
+    </ul>
+</body>
+
+</html>
